@@ -1,0 +1,24 @@
+﻿@page
+@model Pages.Admin.IndexModel
+@{
+    ViewData["Title"] = "Identification";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+@if (Model._DisplayInvalidAccountMessage)
+{
+    <br />
+    <div class="alert alert-danger" role="alert">
+        ERREUR ce compte est invalide
+    </div>
+    <br />
+}
+
+
+
+<form method="post">
+    <input type="text" name="username" placeholder="Login" /><br />
+    <input type="password" name="password" placeholder="Mot de passe" /><br />
+    <button>Se connecter</button>
+</form>
